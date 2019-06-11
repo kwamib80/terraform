@@ -7,3 +7,8 @@ resource "aws_vpc" "mile12" {
   }
 }
 
+resource "aws_subnet" "HR_Dept" {
+    cidr_block = "${cidrsubnet(aws_vpc.mile12.cidr_block, 3, 1)}"
+    vpc_id = "${aws_vpc.mile12.id}"
+    availability_zone = "us-east-1a"
+}
