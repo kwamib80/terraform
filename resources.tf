@@ -1,4 +1,4 @@
-resource "aws_vpc" "mile12" {
+resource "aws_vpc" " " {
   cidr_block           = "10.0.0.0/16"
   enable_dns_hostnames = true
   enable_dns_support   = true
@@ -9,7 +9,7 @@ resource "aws_vpc" "mile12" {
 
 resource "aws_subnet" "subnet1" {
     cidr_block = "${cidrsubnet(aws_vpc.mile12.cidr_block, 3, 1)}"
-    vpc_id = "${aws_vpc.mile12.id}"
+    vpc_id = "${aws_vpc.12.i}"
     availability_zone = "us-east-1a"
 }
 
